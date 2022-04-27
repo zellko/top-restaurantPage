@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    background-image: url("../src/jason-leung-poI7DelFiVA-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, .6);
+    height: 100vh;
+}
+
+h1 {
+    font-size: 5rem;
+    font-weight: 300;
+}
+
+h2 {}
+
+a,
+li,
+button {
+    color: white;
+    transition: all .2s ease;
+}
+
+a:hover,
+li:hover {
+    color: #5cce5c;
+    cursor: pointer;
+}
+
+#content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/********************
+HEADER
+********************/
+
+.header {
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.0);
+    width: 100%;
+    padding: 16px;
+}
+
+ul {
+    display: flex;
+    gap: 16px;
+    margin-left: auto;
+    list-style-type: none;
+}
+
+.header>button {
+    width: 180px;
+    border: 0;
+    border-radius: 0;
+    padding: 16px 0;
+    margin-left: 5vw;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.header>button:hover {
+    cursor: pointer;
+    border: 2px solid #5cce5c;
+}
+
+.header p {
+    font-size: .8rem;
+}
+
+
+/********************
+HOME
+********************/
+
+.home {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+}
+
+.spacer {
+    border-top: 8px dotted white;
+    width: 200px;
+}
+
+.home>button {
+    width: 320px;
+    border: 0;
+    border-radius: 0;
+    padding: 16px 0;
+    margin-top: 32px;
+    background-color: #5cce5c;
+    color: white;
+    border: 4px solid #5cce5c;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.home>button:hover {
+    cursor: pointer;
+    background-color: black;
+}
+
+.home p {
+    font-size: 1.5rem;
+}
+
+
+/********************
+FOOTER
+********************/
+
+.attribution,
+.git-link {
+    position: absolute;
+    bottom: 4px;
+}
+
+.attribution {
+    font-size: 0.8rem;
+    right: 8px;
+}
+
+.git-link {
+    left: 8px;
+}
+
+
+/********************
+JS CLASS
+********************/
+
+.active {
+    color: #5cce5c;
+}
