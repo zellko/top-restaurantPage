@@ -1,4 +1,6 @@
 import { createHomePage } from "./home.js"; // Get the ES6 Module to generate  Home page.
+import { createMenuPage } from "./menu.js"; // Get the ES6 Module to generate  Menu page.
+import { createContactPage } from "./contact.js"; // Get the ES6 Module to generate  Contact page.
 
 const contentDiv = document.querySelector("#content");
 const headerLink = document.querySelectorAll(".header li");
@@ -12,18 +14,16 @@ const modifyPageContent = (() => {
         const contentToRemove = contentDiv.lastChild;
         contentDiv.removeChild(contentToRemove);
     };
-    const loadHome = () => {
-        contentDiv.appendChild(createHomePage());
+    const loadContent = (content) => {
+        contentDiv.appendChild(content);
     };
-    const loadMenu = () => {};
-    const loadContact = () => {};
 
-    return { removeContent, loadHome, loadMenu, loadContact }
+    return { removeContent, loadContent }
 
 })();
 
 
-modifyPageContent.loadHome();
+modifyPageContent.loadContent(createHomePage());
 
 headerLink.forEach(link => link.addEventListener("click", (e) => {
     // When a link or button is clicked...
@@ -36,13 +36,21 @@ headerLink.forEach(link => link.addEventListener("click", (e) => {
     if (loadedContent !== undefined) modifyPageContent.removeContent(); // Remove the loaded content.
 
     // Load the page content according to user click
-    if (linkValue === "menu") {
-        console.log("Load Menu - To be added has ES6 Module");
-    }
     if (e.target.textContent === "Home") {
-        modifyPageContent.loadHome();
+        console.log("Load Home");
+        const homeContent = createHomePage();
+        modifyPageContent.loadContent(homeContent);
     };
+
+    if (linkValue === "menu") {
+        console.log("Load Menu");
+        const menuContent = createMenuPage();
+        modifyPageContent.loadContent(menuContent);
+    }
+
     if (e.target.textContent === "Contact Us") {
-        console.log("Load Menu - To be added has ES6 Module");
+        console.log("Load Contact");
+        const contactContent = createContactPage();
+        modifyPageContent.loadContent(contactContent);
     };
 }));
