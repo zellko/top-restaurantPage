@@ -4,16 +4,22 @@
     box-sizing: border-box;
 }
 
+ :root {
+    --color-green: #5cce5c;
+    --color-white: #ffffff;
+    --bg-shadow-black: rgba(0, 0, 0, .6);
+}
+
 body {
     position: relative;
     display: flex;
     flex-direction: column;
-    color: white;
+    color: var(--color-white);
     background-image: url("../src/jason-leung-poI7DelFiVA-unsplash.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, .6);
+    box-shadow: inset 0 0 0 1000px var(--bg-shadow-black);
     height: 100vh;
 }
 
@@ -22,18 +28,32 @@ h1 {
     font-weight: 300;
 }
 
-h2 {}
+h2 {
+    font-size: 3rem;
+    font-weight: 300;
+    color: var(--color-green);
+}
+
+h3 {
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+h4 {
+    font-size: 1.5rem;
+    font-weight: 300;
+}
 
 a,
 li,
 button {
-    color: white;
+    color: var(--color-white);
     transition: all .2s ease;
 }
 
 a:hover,
 li:hover {
-    color: #5cce5c;
+    color: var(--color-green);
     cursor: pointer;
 }
 
@@ -76,12 +96,17 @@ ul {
 
 .header>button:hover {
     cursor: pointer;
-    border: 2px solid #5cce5c;
+    border: 2px solid var(--color-green);
 }
 
 .header p {
     font-size: .8rem;
 }
+
+
+/********************
+SHARED PROPERTIES
+********************/
 
 
 /********************
@@ -99,7 +124,7 @@ HOME
 }
 
 .spacer {
-    border-top: 8px dotted white;
+    border-top: 8px dotted var(--color-white);
     width: 200px;
 }
 
@@ -109,9 +134,9 @@ HOME
     border-radius: 0;
     padding: 16px 0;
     margin-top: 32px;
-    background-color: #5cce5c;
+    background-color: var(--color-green);
     color: white;
-    border: 4px solid #5cce5c;
+    border: 4px solid var(--color-green);
     font-size: 1rem;
     font-weight: 700;
 }
@@ -121,8 +146,44 @@ HOME
     background-color: black;
 }
 
-.home p {
-    font-size: 1.5rem;
+
+/********************
+CONTACT
+********************/
+
+.contact {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-card h3 {
+    color: var(--color-green);
+}
+
+.contact-img {
+    flex: 1;
+    display: flex;
+    border-radius: 50%;
+}
+
+.contact-phone {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.contact-phone::before {
+    content: url(../src/phone.png);
 }
 
 
@@ -151,5 +212,5 @@ JS CLASS
 ********************/
 
 .active {
-    color: #5cce5c;
+    color: var(--color-green);
 }
