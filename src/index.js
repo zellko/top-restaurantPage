@@ -14,6 +14,7 @@ const modifyPageContent = (() => {
         const contentToRemove = contentDiv.lastChild;
         contentDiv.removeChild(contentToRemove);
     };
+
     const loadContent = (content) => {
         contentDiv.appendChild(content);
     };
@@ -24,6 +25,7 @@ const modifyPageContent = (() => {
 
 
 modifyPageContent.loadContent(createHomePage());
+
 
 headerLink.forEach(link => link.addEventListener("click", (e) => {
     // When a link or button is clicked...
@@ -54,3 +56,12 @@ headerLink.forEach(link => link.addEventListener("click", (e) => {
         modifyPageContent.loadContent(contactContent);
     };
 }));
+
+contentDiv.addEventListener("click", (e) => {
+    const parentClass = e.target.parentNode.className;
+    if (parentClass === "menu-card") {
+        const menuText = e.target.parentNode.lastChild;
+        menuText.classList.toggle("visible");
+        menuText.classList.toggle("hidden");
+    };
+});

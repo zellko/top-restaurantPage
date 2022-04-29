@@ -6,7 +6,7 @@ const createContactPage = () => {
     contactCard.className = "contact-card";
 
     const contactImage = document.createElement("div");
-    contactImage.className = "contact-card";
+    contactImage.className = "contact-img";
 
     // Contact Card content
     const restaurantName = document.createElement("h4");
@@ -25,14 +25,24 @@ const createContactPage = () => {
 
     const schedule = document.createElement("h5");
     schedule.textContent = "OPENING TIMES";
-    const scheduleA = document.createElement("p");
-    schedule.textContent = "Monday - Thursday: 11am - 11pm";
-    const scheduleB = document.createElement("p");
-    schedule.textContent = "Friday - Saturday: 10am - 12am";
+    const scheduleDay = document.createElement("p");
+    scheduleDay.className = "contact-schedule";
+    scheduleDay.textContent = "Monday - Saturday: ";
 
-    contactCard.append(restaurantName, location, spacer, address, phone, schedule);
+    const scheduleHour = document.createElement("span");
+    scheduleHour.textContent = "11am - 11pm";
+    scheduleDay.appendChild(scheduleHour);
+
+    contactCard.append(restaurantName, location, spacer, address, phone, schedule, scheduleDay);
 
     // Image Card content
+    const image = document.createElement("img");
+    image.src = "../src/deryn-macey-kPLccIMtS8E-unsplash.jpg";
+    const imageAttribution = document.createElement("a");
+    imageAttribution.textContent = "Photo by Deryn Macey on Unsplash";
+    imageAttribution.className = "attribution-contact";
+    contactImage.appendChild(image);
+    contactImage.appendChild(imageAttribution);
 
     // Append contact-card and contact-img
     contactDiv.append(contactCard, contactImage);

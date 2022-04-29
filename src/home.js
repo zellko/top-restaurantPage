@@ -2,7 +2,7 @@ const createHomePage = () => {
     const homeDiv = document.createElement("div");
     homeDiv.className = "home";
     const logo = document.createElement("img");
-    logo.src = "../src/sprout.png";
+    logo.src = "../src/reshot-icon-bonsai-tree-45J7TSBRY8.svg";
     logo.alt = "Restaurant Logo";
     const restaurantName = document.createElement("h1");
     restaurantName.textContent = "YGGDRASIL";

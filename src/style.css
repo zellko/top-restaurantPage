@@ -7,6 +7,8 @@
  :root {
     --color-green: #5cce5c;
     --color-white: #ffffff;
+    --logo-transparent: rgba(255, 255, 255, 0.6);
+    --card-transparent: rgba(255, 255, 255, 0.2);
     --bg-shadow-black: rgba(0, 0, 0, .6);
 }
 
@@ -20,7 +22,8 @@ body {
     background-position: center;
     background-size: cover;
     box-shadow: inset 0 0 0 1000px var(--bg-shadow-black);
-    height: 100vh;
+    min-height: 100vh;
+    height: 100%;
 }
 
 h1 {
@@ -41,6 +44,11 @@ h3 {
 
 h4 {
     font-size: 1.5rem;
+    font-weight: 300;
+}
+
+h5 {
+    font-size: 1.1rem;
     font-weight: 300;
 }
 
@@ -74,6 +82,14 @@ HEADER
     background-color: rgba(255, 255, 255, 0.0);
     width: 100%;
     padding: 16px;
+}
+
+.header img {
+    width: 64px;
+    background-color: var(--logo-transparent);
+    border-radius: 50%;
+    border-radius: 50%;
+    border: solid 2px var(--color-green);
 }
 
 ul {
@@ -123,6 +139,13 @@ HOME
     gap: 16px;
 }
 
+.home img {
+    width: 128px;
+    background-color: var(--logo-transparent);
+    border-radius: 50%;
+    border: solid 2px var(--color-green);
+}
+
 .spacer {
     border-top: 8px dotted var(--color-white);
     width: 200px;
@@ -148,32 +171,103 @@ HOME
 
 
 /********************
+MENU
+********************/
+
+.menu {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 64px;
+}
+
+.menu-card {
+    margin-bottom: 24px;
+}
+
+.menu-card-img {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0 65%;
+    width: 80vw;
+    height: 200px;
+}
+
+.pizza {
+    background-image: url(../src/nik-owens-40OJLYVWeeM-unsplash.jpg);
+    box-shadow: inset 0 0 0 1000px var(--bg-shadow-black);
+}
+
+.pasta {
+    background-image: url(../src/eaters-collective-12eHC6FxPyg-unsplash.jpg);
+    box-shadow: inset 0 0 0 1000px var(--bg-shadow-black);
+}
+
+.desert {
+    background-image: url(../src/najlacam-f8TajCVv4s8-unsplash.jpg);
+    box-shadow: inset 0 0 0 1000px var(--bg-shadow-black);
+}
+
+.menu-card-img:hover {
+    cursor: pointer;
+    border: 1px solid var(--color-green);
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, .2);
+}
+
+.menu-card-text {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--logo-transparent);
+    color: black;
+    gap: 8px;
+    max-height: min-content;
+    transition: all .25s linear;
+}
+
+
+/********************
 CONTACT
 ********************/
 
 .contact {
     flex: 1;
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 32px;
     align-items: center;
 }
 
 .contact-card {
-    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    justify-self: flex-end;
+    gap: 8px;
 }
 
 .contact-card h3 {
     color: var(--color-green);
 }
 
+.contact-card .spacer {
+    margin-bottom: 16px;
+}
+
 .contact-img {
-    flex: 1;
+    position: relative;
     display: flex;
+    width: min-content;
+    justify-content: center;
+    text-align: center;
+}
+
+.contact-img img {
     border-radius: 50%;
+    width: 320px;
+    height: 320px;
 }
 
 .contact-phone {
@@ -184,6 +278,16 @@ CONTACT
 
 .contact-phone::before {
     content: url(../src/phone.png);
+}
+
+.contact-schedule {
+    color: var(--color-green);
+    font-weight: 700;
+}
+
+.contact-schedule span {
+    color: var(--color-white);
+    font-weight: 300;
 }
 
 
@@ -202,6 +306,13 @@ FOOTER
     right: 8px;
 }
 
+.attribution-contact {
+    position: absolute;
+    font-size: 0.6rem;
+    bottom: 8px;
+    width: 50%;
+}
+
 .git-link {
     left: 8px;
 }
@@ -213,4 +324,18 @@ JS CLASS
 
 .active {
     color: var(--color-green);
+}
+
+.visible {
+    transform: scale(1, 1);
+    transform-origin: left;
+}
+
+.hidden {
+    transform: scale(0, 1);
+    transform-origin: left;
+}
+
+.hidden-h {
+    max-height: 0px;
 }
