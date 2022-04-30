@@ -38,11 +38,7 @@ const createContactPage = () => {
     // Image Card content
     const image = document.createElement("img");
     image.src = "../src/deryn-macey-kPLccIMtS8E-unsplash.jpg";
-    const imageAttribution = document.createElement("a");
-    imageAttribution.textContent = "Photo by Deryn Macey on Unsplash";
-    imageAttribution.className = "attribution-contact";
     contactImage.appendChild(image);
-    contactImage.appendChild(imageAttribution);
 
     // Append contact-card and contact-img
     contactDiv.append(contactCard, contactImage);

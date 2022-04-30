@@ -58,7 +58,10 @@ headerLink.forEach(link => link.addEventListener("click", (e) => {
 }));
 
 contentDiv.addEventListener("click", (e) => {
+    console.log(e);
     const parentClass = e.target.parentNode.className;
+
+    console.log(parentClass);
     if (parentClass === "menu-card") {
         const menuText = e.target.parentNode.lastChild;
         menuText.classList.toggle("visible");
