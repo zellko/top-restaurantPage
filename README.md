@@ -5,26 +5,25 @@ The Odin Project - JavaScript - Project: Restaurant Page
 ### UI
 HTML/CSS:
 - [x] Style the Home page.
-- [ ] Style the Menu page.
+- [x] Style the Menu page.
 - [x] Style the Contact page.
-- [ ] Styling finalization.
+- [ ] Styling finalization/cleanup.
 
 ### JS
 JS:
 - [x] Generate Home page using JS, in a ES6 module.
-- [ ] Generate Menu page using JS, in a ES6 module.
+- [x] Generate Menu page using JS, in a ES6 module.
 - [x] Generate Contact page using JS, in a ES6 module. 
+- [ ] Clean-up / Comments. 
 
 ## Ressources:
 Images:
 - Logo: https://www.reshot.com/free-svg-icons/item/bonsai-tree-45J7TSBRY8/
-- Background: 
-- Contact image:
-- Menu Pizza: https://unsplash.com/@nik_owens?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText by Nik Owens
+- Background: https://unsplash.com/@ninjason?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText by Jason Leung
+- Contact image: https://unsplash.com/@runningonrealfood?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText by Deryn Macey
 - Menu Pasta: https://unsplash.com/@eaterscollective?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText by Eaters Collective
 - Menu Desert: https://unsplash.com/@najlacam?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText by NajlaCam
-  
-  
+
 Color Palette:
 - 
 
