@@ -4,11 +4,11 @@
     box-sizing: border-box;
 }
 
- :root {
+:root {
     --color-green: #5cce5c;
     --color-white: #ffffff;
     --logo-transparent: rgba(255, 255, 255, 0.6);
-    --card-transparent: rgba(255, 255, 255, 0.2);
+    --card-transparent: rgba(0, 0, 0, 0.6);
     --bg-shadow-black: rgba(0, 0, 0, .6);
 }
 
@@ -24,6 +24,7 @@ body {
     box-shadow: inset 0 0 0 1000px var(--bg-shadow-black);
     min-height: 100vh;
     height: 100%;
+    font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 h1 {
@@ -193,6 +194,8 @@ MENU
     background-position: 0 65%;
     width: 80vw;
     height: 200px;
+    font-size: 5rem;
+    font-weight: 300;
 }
 
 .pizza {
@@ -205,7 +208,7 @@ MENU
     box-shadow: inset 0 0 0 1000px var(--bg-shadow-black);
 }
 
-.desert {
+.dessert {
     background-image: url(../src/najlacam-f8TajCVv4s8-unsplash.jpg);
     box-shadow: inset 0 0 0 1000px var(--bg-shadow-black);
 }
@@ -219,11 +222,39 @@ MENU
 .menu-card-text {
     display: flex;
     flex-direction: column;
-    background-color: var(--logo-transparent);
-    color: black;
+    background-color: var(--card-transparent);
     gap: 8px;
     max-height: min-content;
-    transition: all .25s linear;
+    overflow: hidden;
+}
+
+.dish-card {
+    display: grid;
+    grid-template-columns: 1fr min-content;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    border-bottom: 1px solid black;
+    padding: 16px;
+}
+
+.dish-name {
+    grid-column: 1;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.dish-ingr {
+    grid-column: 1;
+    font-size: .8rem;
+    font-weight: 300;
+    color: var(--color-green);
+}
+
+.dish-price {
+    grid-row: 1 / 3;
+    font-size: 1rem;
+    grid-column: 2;
+    font-weight: 700;
 }
 
 
@@ -327,15 +358,9 @@ JS CLASS
 }
 
 .visible {
-    transform: scale(1, 1);
-    transform-origin: left;
+    height: min-content;
 }
 
 .hidden {
-    transform: scale(0, 1);
-    transform-origin: left;
-}
-
-.hidden-h {
-    max-height: 0px;
+    height: 0px;
 }
