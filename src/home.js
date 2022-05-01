@@ -1,8 +1,11 @@
+// Import images
+import logo from './reshot-icon-bonsai-tree-45J7TSBRY8.svg';
+
 const createHomePage = () => {
     const homeDiv = document.createElement("div");
     homeDiv.className = "home";
     const logo = document.createElement("img");
-    logo.src = "../src/reshot-icon-bonsai-tree-45J7TSBRY8.svg";
+    logo.src = logo
     logo.alt = "Restaurant Logo";
     const restaurantName = document.createElement("h1");
     restaurantName.textContent = "YGGDRASIL";

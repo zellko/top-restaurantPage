@@ -1,3 +1,6 @@
+// Import images
+import restaurantFrontImg from './deryn-macey-kPLccIMtS8E-unsplash.jpg';
+
 const createContactPage = () => {
     const contactDiv = document.createElement("div");
     contactDiv.className = "contact";
@@ -36,7 +39,7 @@ const createContactPage = () => {
 
     // Contact card image content
     const image = document.createElement("img");
-    image.src = "../src/deryn-macey-kPLccIMtS8E-unsplash.jpg";
+    image.src = restaurantFrontImg;
     image.alt = "Restaurant front image";
     contactImage.appendChild(image);
 

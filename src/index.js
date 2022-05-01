@@ -1,6 +1,7 @@
 import { createHomePage } from "./home.js"; // Get the ES6 Module to generate  Home page.
 import { createMenuPage } from "./menu.js"; // Get the ES6 Module to generate  Menu page.
 import { createContactPage } from "./contact.js"; // Get the ES6 Module to generate  Contact page.
+import './style.css'; // Import CSS
 
 const contentDiv = document.querySelector("#content");
 const headerLink = document.querySelectorAll(".header li");
