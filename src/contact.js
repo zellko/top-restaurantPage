@@ -8,7 +8,7 @@ const createContactPage = () => {
     const contactImage = document.createElement("div");
     contactImage.className = "contact-img";
 
-    // Contact Card content
+    // Contact card text content
     const restaurantName = document.createElement("h4");
     restaurantName.textContent = "YGGDRASIL";
     const location = document.createElement("h3");
@@ -22,7 +22,6 @@ const createContactPage = () => {
     phone.className = "contact-phone";
     phone.textContent = "+44 123 456 7890";
 
-
     const schedule = document.createElement("h5");
     schedule.textContent = "OPENING TIMES";
     const scheduleDay = document.createElement("p");
@@ -35,9 +34,10 @@ const createContactPage = () => {
 
     contactCard.append(restaurantName, location, spacer, address, phone, schedule, scheduleDay);
 
-    // Image Card content
+    // Contact card image content
     const image = document.createElement("img");
     image.src = "../src/deryn-macey-kPLccIMtS8E-unsplash.jpg";
+    image.alt = "Restaurant front image";
     contactImage.appendChild(image);
 
     // Append contact-card and contact-img

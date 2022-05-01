@@ -1,4 +1,4 @@
-import { cardTemplate } from "./menuCardTemplate.js"; // Get the ES6 Module to generate  Contact page.
+import { cardTemplate } from "./menuCardTemplate.js"; // Get the ES6 Module to generate card template.
 
 const menuData = {
     pizza: {
@@ -19,6 +19,8 @@ const menuData = {
 };
 
 function createDishCard(dishSection, data) {
+    // Function to add the "dishes" to each "menu card" (pizza, pasta, dessert)...
+    // ...the dished are retrived from "menuData" object
     for (let key in data) {
         const dishCard = document.createElement("div");
         dishCard.className = "dish-card";

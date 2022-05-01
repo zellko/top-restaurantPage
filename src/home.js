@@ -16,7 +16,6 @@ const createHomePage = () => {
     bookNowButton.textContent = "BOOK NOW";
 
     homeDiv.append(logo, restaurantName, restaurantStyle, spacer, text, bookNowButton);
-    // homeDiv.appendChild(restaurantName);
     return homeDiv;
 };
 

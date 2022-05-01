@@ -1,4 +1,5 @@
 const cardTemplate = (imgClassName) => {
+    // Function to create the 3 "menu card" (Pizza, Pasta, Dessert)
     const menuDiv = document.createElement("div");
     menuDiv.className = "menu";
 
